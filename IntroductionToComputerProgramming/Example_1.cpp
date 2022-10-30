@@ -5,8 +5,8 @@ using namespace std;
 
 int main() 
 {
-  cout << "It's me, your first program.";
+	cout << "It's me, your first program.";
 
-  askOS();
-  return 0;
+	askOS();
+	return 0;
 }
