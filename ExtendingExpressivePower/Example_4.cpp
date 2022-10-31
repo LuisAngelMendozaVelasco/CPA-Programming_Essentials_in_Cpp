@@ -1,5 +1,4 @@
 // Functions
-
 #include <iostream>
 #include "../myFunctions.h"
 
