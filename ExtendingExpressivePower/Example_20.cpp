@@ -14,7 +14,10 @@ int main()
 
     for (int i = 0; i < 5; i++) {
         arr[i] = i * i;
-        cout << arr[i] << endl;
+        if (i < 4)
+            cout << arr[i] << endl;
+        else
+            cout << arr[i];
     }
 
     /*We make use of the newly allocated array (to be precise, a vector) 
