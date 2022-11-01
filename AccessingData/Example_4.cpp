@@ -1,4 +1,5 @@
-/*Conversions – gains and losses
+/* Conversions – gains and losses
+
 We want to transfer the maximum value allowed for 
 the int variables to the short variable.*/
 #include <iostream>
