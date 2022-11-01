@@ -15,8 +15,7 @@ int main()
 
     cout << "Input string: ";
     cin >> line_of_types;
-    cout << "String: ";
-    cout << line_of_types;
+    cout << "String: " << line_of_types;
 
     askOS();
     return 0;
