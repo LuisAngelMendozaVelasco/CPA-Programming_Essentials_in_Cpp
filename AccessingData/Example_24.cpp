@@ -18,7 +18,7 @@ int main()
     // It converts its every char to upper case.
     for (int i = 0; i < the_string.length(); i++)
         the_string[i] = the_string[i] - 'a' + 'A';
-    cout << the_string << endl;
+    cout << the_string;
 
     askOS();
     return 0;
