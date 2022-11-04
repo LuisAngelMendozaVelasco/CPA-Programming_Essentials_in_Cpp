@@ -10,13 +10,13 @@ using namespace std;
 
 class Super {
 protected:
-	int storage;
+    int storage;
 public:
-	void put(int val)
+    void put(int val)
     { 
         storage = val; 
     }
-	int get() 
+    int get() 
     { 
         return storage; 
     }
@@ -25,7 +25,7 @@ public:
 // The print function accesses the storage variable from the Superclass. This wouldn’t be possible if the variable was declared as private.
 class Sub : public Super {
 public:
-	void print() 
+    void print() 
     { 
         cout << "storage = " << storage << endl; 
     }
@@ -34,11 +34,11 @@ public:
 // In the main function scope, the storage variable remains hidden anyway.
 int main() 
 {
-	Sub object;
+    Sub object;
 
-	object.put(100);
-	object.put(object.get() + 1);
-	object.print();
+    object.put(100);
+    object.put(object.get() + 1);
+    object.print();
 
     askOS();
     return 0; 
