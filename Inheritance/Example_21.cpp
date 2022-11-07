@@ -41,9 +41,9 @@ int main()
     Class o3(o2);
 
     o1.increment();
-    cout << o1.value() << endl;
-    cout << o2.value() << endl;
-    cout << o3.value() << endl;
+    cout << "o1.value() = " << o1.value() << endl;
+    cout << "o2.value() = " << o2.value() << endl;
+    cout << "o3.value() = " << o3.value() << endl;
 
     askOS();
     return 0; 
