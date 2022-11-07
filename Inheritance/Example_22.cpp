@@ -16,7 +16,7 @@ class Class {
 public:
     Class(int value) 
     {
-            data = new int;
+        data = new int;
         *data = value;
     }
     void increment()
