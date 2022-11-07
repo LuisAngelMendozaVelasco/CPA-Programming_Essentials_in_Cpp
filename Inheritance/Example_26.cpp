@@ -10,14 +10,14 @@ using namespace std;
 
 class Dummy {
 private:
-	Dummy(Dummy &source) {}
+    Dummy(Dummy &source) {}
 public:
-	Dummy(int value) {}
+    Dummy(int value) {}
 };
 
 void do_something(Dummy ob)
 {
-	cout << "I'm here!" << endl;
+    cout << "I'm here!" << endl;
 }
 
 /* Errors are caused by the fact that the copying constructor is private i.e. it's unaccessible in contexts where it is invoked implicitly e.g. during o2 declaration. 
@@ -25,10 +25,10 @@ The same problem appears during do_something() invocation when o1 is copied into
 Moving the constructor to public part eliminates these errors.*/
 int main()
 {
-	Dummy o1(123);
-	Dummy o2 = o1; // Error
+    Dummy o1(123);
+    Dummy o2 = o1; // Error
 
-	do_something(o1); //Error
+    do_something(o1); //Error
 
     askOS();
     return 0;   
