@@ -18,7 +18,7 @@ public:
     WithConstructor(int a, float b) : i(a), f(b) { }
     void display()
     { 
-        cout << "i=" << i << ",f=" << f << endl; 
+        cout << "i = " << i << ", f = " << f << endl; 
     }
 };
 
