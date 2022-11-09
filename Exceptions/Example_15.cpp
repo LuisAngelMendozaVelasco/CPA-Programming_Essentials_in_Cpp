@@ -6,6 +6,7 @@ and the unexpected handler function must be defined and set. Failure to meet any
 
 using namespace std;
 
+// Note the empty throw statement inside the unexp function. This form doesn’t mean that the function throws nothing – on the contrary, it means that the exception received by the function is re-thrown.
 void unexp()
 {
     cout << "Unexpected exception arrived!" << endl;
