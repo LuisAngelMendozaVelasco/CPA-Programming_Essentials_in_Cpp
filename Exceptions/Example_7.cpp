@@ -1,8 +1,7 @@
 /* Throw and the objects it throws
 
 The throw statement is obligated to throw a value e.g. an object – it can’t throw nothing. Throw is able to throw any object of any accessible class. 
-We also know that the type of the object thrown may be used to choose the catch which will be responsible for handling the exception.
-*/
+We also know that the type of the object thrown may be used to choose the catch which will be responsible for handling the exception.*/
 #include <iostream>
 #include "../myFunctions.h"
 
