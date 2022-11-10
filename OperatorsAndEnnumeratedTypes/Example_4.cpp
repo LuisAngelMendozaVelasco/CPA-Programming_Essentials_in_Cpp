@@ -4,7 +4,8 @@ We’ll redefine the meaning of the indexing operator.
 From a certain point of view, a stack is an array – a very specific one, but still an array.
 We want the indexing to work in this odd way:
     Stack[0] returns a reference to the element lying at the top of the stack
-    Stack[-1] returns a reference to the element lying below the top of the stack*/
+    Stack[-1] returns a reference to the element lying below the top of the stack
+This is a reference, not a value, as we want to use the operator inside l-value expressions, e.g. as a left argument of the assignment operator.*/
 #include <iostream>
 #include "../myFunctions.h"
 
@@ -35,8 +36,11 @@ public:
     int& operator[](int index);
 };
 
+/* The function returns a value of type int& as the stack’s element type is int
+The function has one argument – the index; we pass it by value as the array index doesn’t need to be a variable – it may be an expression too*/
 int& Stack::operator[] (int index)
 {
+    /* An attempt to reach for a non-existent stack element will cause an exception to be thrown. It seems that the std::range_error is the best candidate for this purpose.*/
     if(index > 0 || index <= -SP)
         throw std::range_error("out of stack");
     return stackstore[SP + index - 1];
@@ -48,7 +52,7 @@ Stack& operator<< (Stack &s, int v)
     return s;
 }
 
-Stack& operator>>(Stack &s, int &v)
+Stack& operator>> (Stack &s, int &v)
 {
     v = s.pop();
     return s;
