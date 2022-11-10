@@ -1,4 +1,4 @@
-/* Header file for stack
+/* Stack header file
 
 We’ve named it mystack.h. We’ve assumed that the file with all required definitions will be named mystack.cpp.
 
