@@ -1,3 +1,4 @@
+// Stack implementation
 #include "mystack.h"
 
 stack_size_error::stack_size_error(const std::string &msg) : std::length_error(msg)
