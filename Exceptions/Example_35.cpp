@@ -10,8 +10,8 @@ int main()
     try {
         Stack stack;
         stack.push(1);
-        cout << stack.pop() << endl;
-        cout << stack.pop() << endl;        
+        cout << "stack.pop(): " << stack.pop() << endl;
+        cout << "stack.pop(): " << stack.pop() << endl;        
     }
     catch(stack_bad_alloc &sba) {
         cout << "No room for the stack - sorry!" << endl;
