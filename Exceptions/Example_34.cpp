@@ -1,8 +1,8 @@
-// We’ll check if the stack can handle too many pushes
+// We’ll check if the stack can handle too many pushes.
+
 #include "mystack.h"
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 int main()
@@ -27,9 +27,15 @@ int main()
         cout << "Stack is empty - sorry!" << endl;
     }
     catch(...) {
-        cout << "I don't know what I'm doing";
+        cout << "I don't know what I'm doing" << endl;
     }
 
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Stack is too small for that many pushes - sorry!
+*/

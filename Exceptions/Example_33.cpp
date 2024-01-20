@@ -1,8 +1,8 @@
-// We’ll check if the constructor can handle our exorbitant demands on the stack size
+// We’ll check if the constructor can handle our exorbitant demands on the stack size.
+
 #include "mystack.h"
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 int main()
@@ -25,9 +25,15 @@ int main()
         cout << "Stack is empty - sorry!" << endl;
     }
     catch(...) {
-        cout << "I don't know what I'm doing";
+        cout << "I don't know what I'm doing" << endl;
     }
 
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+1
+*/

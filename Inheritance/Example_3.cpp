@@ -1,48 +1,56 @@
-/* Multi-inheritance
+///////////////////////
+// Multi-inheritance //
+///////////////////////
 
+/*
 We need to emphasize that using this technique is commonly recognized as error-prone and obfuscating class hierarchy.
 Any solution that avoids multi-inheritance is generally better and in fact many contemporary object programming languages 
-don’t offer multi-inheritance at all. */
+don’t offer multi-inheritance at all. 
+*/
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 class SuperA {
-protected:
-    int storage;
-public:
-    void put(int val)
-    { 
-        storage = val; 
-    }
-    int get() 
-    { 
-        return storage; 
-    }
+    protected:
+        int storage;
+
+    public:
+        void put(int val)
+        { 
+            storage = val; 
+        }
+
+        int get() 
+        { 
+            return storage; 
+        }
 };
 
 class SuperB {
-protected:
-    int safe;
-public:
-    void insert(int val) 
-    { 
-        safe = val; 
-    }
-    int takeout()
-    { 
-        return safe; 
-    }
+    protected:
+        int safe;
+
+    public:
+        void insert(int val) 
+        { 
+            safe = val; 
+        }
+        
+        int takeout()
+        { 
+            return safe; 
+        }
 };
 
 class Sub : public SuperA, public SuperB {
-public:
-    void print()
-    { 
-        cout << "storage = " << storage << endl; 
-        cout << "safe    = " << safe << endl;
-    }
+    public:
+        void print()
+        { 
+            cout << "storage = " << storage << endl; 
+            cout << "safe = " << safe << endl;
+        }
 };
 
 int main()
@@ -58,3 +66,10 @@ int main()
     askOS();
     return 0; 
 }
+
+/*
+Output:
+
+storage = 3
+safe = 5
+*/

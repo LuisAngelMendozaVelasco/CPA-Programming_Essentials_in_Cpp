@@ -1,4 +1,5 @@
-/* The responsibility of handling exceptions may not only be divided – it may be shared, too. This means that the handling of the same exceptions may be provided at more than one level.
+/* 
+The responsibility of handling exceptions may not only be divided – it may be shared, too. This means that the handling of the same exceptions may be provided at more than one level.
 Note that any of the catch branches might throw an exception too, and the exception won’t be handled in the place where it was created, but at a higher level.
 The broker tries to catch all the exceptions (and succeeds!), but immediately re-throws all of them using the argument-less throw instruction.
 This is the only possible way of re-throwing an exception in the ellipsis branch where the caught exception is completely anonymous and therefore imperceptible.
@@ -10,10 +11,11 @@ We can throw another (new) exception instead of throwing the received exception.
 Here’s an example:
     catch(logic_error &err) {
         throw "We have a problem";
-    }*/
+    }
+*/
+
 #include <iostream> 
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -61,3 +63,18 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Broker swept problems under the carpet 
+Logic error: 0
+Broker swept problems under the carpet 
+Logic error: 1
+Broker swept problems under the carpet 
+Exception: std::exception
+Broker swept problems under the carpet 
+Runtime error: 2
+Broker swept problems under the carpet 
+Something bad happened
+*/

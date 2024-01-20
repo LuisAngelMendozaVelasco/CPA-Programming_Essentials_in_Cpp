@@ -1,24 +1,29 @@
-/* Stack again
+/////////////////
+// Stack again //
+/////////////////
 
+/*
 We’ve introduced two important amendments compared to its previous incarnations:
 the values stored in the stack are still located inside an array, but the size of the array is defined dynamically by the constructor; note the default stack size specification
 as a consequence of the previous modification, we’ve had to add a destructor responsible for removing the array at the end of the stack’s life
-A very simple main function proves that the stack behaves correctly.*/
+A very simple main function proves that the stack behaves correctly.
+*/
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 class Stack {
-private:
-    int *stackstore;
-    int stacksize;
-    int SP;
-public:
-    Stack(int size = 100);
-    ~Stack();
-    void push(int value);
-    int pop();
+    private:
+        int *stackstore;
+        int stacksize;
+        int SP;
+        
+    public:
+        Stack(int size = 100);
+        ~Stack();
+        void push(int value);
+        int pop();
 };
 
 Stack::Stack(int size)
@@ -46,9 +51,16 @@ int Stack::pop()
 int main()
 {
     Stack stk;
+
     stk.push(1);
-    cout << "stk.pop(): " << stk.pop();
+    cout << "stk.pop(): " << stk.pop() << endl;
 
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+stk.pop(): 1
+*/

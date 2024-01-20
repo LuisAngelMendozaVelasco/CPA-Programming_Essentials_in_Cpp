@@ -1,11 +1,15 @@
-/* Order of the catch branches
+/////////////////////////////////
+// Order of the catch branches //
+/////////////////////////////////
 
+/*
 We’ve swapped the first and the fourth catch branches. The program’s behaviour changes.
-We should expect that the compiler is going to produce some warning messages. It won’t prevent our program from being successfully compiled, but the warnings suggest that not everything has gone 
-as we would have liked.*/
+We should expect that the compiler is going to produce some warning messages. It won’t prevent our program from being successfully compiled, 
+but the warnings suggest that not everything has gone as we would have liked.
+*/
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -46,3 +50,15 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+warning: exception of type ‘std::out_of_range’ will be caught by earlier handler [-Wexceptions]
+    catch(out_of_range &ofr) {
+Exception: 0
+Exception: 1
+Exception: 2
+Exception: std::exception
+Something bad happened
+*/

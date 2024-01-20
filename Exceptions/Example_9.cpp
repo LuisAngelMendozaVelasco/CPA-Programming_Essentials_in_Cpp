@@ -1,4 +1,5 @@
-/* To throw or not to throw
+/* 
+To throw or not to throw
 
 Knowing whether a certain function throws an exception or not can be very valuable to the compiler.
 A function's epilogue can be much more complex when an exception is thrown somewhere inside function's body. It means that function which announces loudly that isn't going 
@@ -13,16 +14,17 @@ This function may throw exceptions of type int, string and Class.
 The last form look like this:
     throw()
 and means “the function throws no exceptions at all”.
-COMPILATION ERROR!*/
+COMPILATION ERROR!
+*/
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 class Class {
-public:
-    string msg;
-    Class(string txt) : msg(txt) {}
+    public:
+        string msg;
+        Class(string txt) : msg(txt) {}
 };
 
 // We’ve added the throw specifications to two of our functions.
@@ -52,3 +54,10 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+error: ISO C++17 does not allow dynamic exception specifications
+    void thrower() throw(Class)
+*/

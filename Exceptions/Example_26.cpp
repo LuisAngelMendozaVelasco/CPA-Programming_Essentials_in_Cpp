@@ -1,4 +1,7 @@
-// Sharing the responsibility
+////////////////////////////////
+// Sharing the responsibility //
+////////////////////////////////
+
 #include <iostream>
 #include "../myFunctions.h"
 
@@ -48,3 +51,13 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Broker - logic_error: 0
+Broker - logic_error: 1
+Exception: std::exception
+Runtime error: 2
+Something bad happened
+*/

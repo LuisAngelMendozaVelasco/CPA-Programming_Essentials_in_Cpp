@@ -1,8 +1,11 @@
-/* A badly constructed broker may ruin the exception handling logic at higher levels. 
-The broker’s decided to take control over all arriving exceptions. None of them will leave the broker. We can say that “everything that comes to the broker stays in the broker”.*/
+/* 
+A badly constructed broker may ruin the exception handling logic at higher levels. 
+The broker’s decided to take control over all arriving exceptions. None of them will leave the broker. 
+We can say that “everything that comes to the broker stays in the broker”.
+*/
+
 #include <iostream> 
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i) {
@@ -48,3 +51,13 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Broker swept problems under the carpet
+Broker swept problems under the carpet
+Broker swept problems under the carpet
+Broker swept problems under the carpet
+Broker swept problems under the carpet
+*/

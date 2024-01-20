@@ -1,8 +1,8 @@
-// We’ll check if the stack can handle too many pops
+// We’ll check if the stack can handle too many pops.
+
 #include "mystack.h"
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 int main()
@@ -26,9 +26,16 @@ int main()
         cout << "Stack is empty - sorry!" << endl;
     }
     catch(...) {
-        cout << "I don't know what I'm doing";
+        cout << "I don't know what I'm doing" << endl;
     }
 
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+stack.pop(): 1
+stack.pop(): Stack is empty - sorry!
+*/

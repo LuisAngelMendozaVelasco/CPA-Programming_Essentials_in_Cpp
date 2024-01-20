@@ -1,7 +1,7 @@
 // We can repair our program in a very simple way – all we have to do here is add an ellipsis branch, which will be responsible for taking care of all the orphaned exceptions.
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -32,3 +32,13 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Exception: 0
+Exception: 1
+Exception: std::exception
+Exception: 2
+Something bad happened
+*/

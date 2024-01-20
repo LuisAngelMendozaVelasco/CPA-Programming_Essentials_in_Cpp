@@ -1,10 +1,14 @@
-/* Sharing the responsibility
+////////////////////////////////
+// Sharing the responsibility //
+////////////////////////////////
 
+/*
 We’ve added a broker between the main() and the function(). The broker handles some of the passing exceptions, namely those compatible with the exception class. 
-Now the handling process is dispersed over two levels: lower (inside broker) and upper (inside main).*/
+Now the handling process is dispersed over two levels: lower (inside broker) and upper (inside main).
+*/
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -18,8 +22,10 @@ void function(int i)
     }
 }
 
-/* Most of the exceptions have been handled by the broker and haven’t reached the main function.We can use this method when we want to divide the responsibility 
-of handling different kinds of exceptions between different layers of the program logic.*/
+/* 
+Most of the exceptions have been handled by the broker and haven’t reached the main function.We can use this method when we want to divide the responsibility 
+of handling different kinds of exceptions between different layers of the program logic.
+*/
 void broker(int i)
 {
     try { 
@@ -53,3 +59,13 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Broker - exception: 0
+Broker - exception: 1
+Broker - exception: std::exception
+Broker - exception: 2
+Something bad happened
+*/

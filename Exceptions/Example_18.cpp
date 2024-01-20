@@ -1,9 +1,11 @@
-/* We can selectively choose the exceptions we want to catch and handle carefully, and those that we want to handle very briefly.
+/* 
+We can selectively choose the exceptions we want to catch and handle carefully, and those that we want to handle very briefly.
 The code mixes the two previous approaches: some of the exceptions are caught individually while others go to the ellipsis.
-There’s one important condition: the ellipsis branch, if it exists, must be the last specified branch. Otherwise, the compiler will produce an error.*/
+There’s one important condition: the ellipsis branch, if it exists, must be the last specified branch. Otherwise, the compiler will produce an error.
+*/
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -43,3 +45,13 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Out of range: 0
+Overflow: 1
+Domain: 2
+Exception: std::exception
+Something bad happened
+*/

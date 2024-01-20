@@ -1,9 +1,11 @@
-/* Order of the catch branches
+/////////////////////////////////
+// Order of the catch branches //
+/////////////////////////////////
 
-The order of the catch branches matters yes and no. We’ll start from the “no” variant.*/
+// The order of the catch branches matters yes and no. We’ll start from the “no” variant.
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -44,3 +46,13 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Out of range: 0
+Overflow: 1
+Domain: 2
+Exception: std::exception
+Something bad happened
+*/

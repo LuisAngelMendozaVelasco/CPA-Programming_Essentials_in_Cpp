@@ -1,8 +1,8 @@
 // We’re prepared for all circumstances. All stack operations are covered by the try block, and we have a complete set of catches ready to diagnose all problems.
+
 #include "mystack.h"
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 int main()
@@ -31,3 +31,9 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+1
+*/

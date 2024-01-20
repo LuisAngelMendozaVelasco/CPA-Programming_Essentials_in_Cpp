@@ -1,7 +1,7 @@
-/* We’ve changed the catch header and added the “exception &ex” instead of the ellipsis.*/
+// We’ve changed the catch header and added the “exception &ex” instead of the ellipsis.
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -21,8 +21,11 @@ int main()
         try {
             function(i);
         }
-        /* The branch is allowed to catch all exceptions whose objects are compatible in type with the exceptions class.
-        We can identify an object, name it locally (as ex) and make use of its properties and/or functions. We invoke the what function to find out what the object wants to say about itself.*/
+        /* 
+        The branch is allowed to catch all exceptions whose objects are compatible in type with the exceptions class.
+        We can identify an object, name it locally (as ex) and make use of its properties and/or functions. 
+        We invoke the what function to find out what the object wants to say about itself.
+        */
         catch(exception &ex) {
             cout << "Exception caught: " << ex.what() << endl;
         }
@@ -31,3 +34,12 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Exception caught: 0
+Exception caught: 1
+Exception caught: 2
+Exception caught: std::exception
+*/

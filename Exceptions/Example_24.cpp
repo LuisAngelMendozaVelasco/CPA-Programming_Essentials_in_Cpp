@@ -1,7 +1,9 @@
-// Process of selecting the target exception handler.
+///////////////////////////////////////////////////////
+// Process of selecting the target exception handler //
+///////////////////////////////////////////////////////
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 void function(int i)
@@ -38,3 +40,13 @@ int main()
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Logic error: 0
+Logic error: 1
+Exception: std::exception
+Runtime error: 2
+Something bad happened
+*/

@@ -1,18 +1,20 @@
-/* Newer compilers accepts completely differ syntax for the same purpose. A function which throws an exception (no matter which exactly) announces its intent using the following form:.
+/* 
+Newer compilers accepts completely differ syntax for the same purpose. A function which throws an exception (no matter which exactly) announces its intent using the following form:.
     noexcept(false)
 A statement to the contrary is written as:
     noexcept(true)
 or simply as:
-    noexcept   */
+    noexcept   
+*/
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 class Class {
-public:
-    string msg;
-    Class(string txt) : msg(txt) {}
+    public:
+        string msg;
+        Class(string txt) : msg(txt) {}
 };
 
 void thrower() noexcept(false)
@@ -33,9 +35,17 @@ int main()
         thrower();
     }
     catch(Class &exc) {
-        cout << "Caught!";
+        cout << "Caught!" << endl;
     }
 
     askOS();
     return 0;
 }
+
+/*
+Output:
+
+Putter
+Thrower
+Caught!
+*/

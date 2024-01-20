@@ -1,27 +1,32 @@
-/* Explicit constructor
+//////////////////////////
+// Explicit constructor //
+//////////////////////////
 
-The explicit constructor gets one parameter of type int.*/
+// The explicit constructor gets one parameter of type int.
+
 #include <iostream>
 #include "../myFunctions.h"
-
 using namespace std;
 
 class Class {
     int *data;
-public:
-    Class(int value)
-    {
-        data = new int;
-        *data = value;
-    }
-    void increment()
-    {
-        (*data)++; 
-    }
-    int value()
-    { 
-        return *data; 
-    }
+
+    public:
+        Class(int value)
+        {
+            data = new int;
+            *data = value;
+        }
+
+        void increment()
+        {
+            (*data)++; 
+        }
+
+        int value()
+        { 
+            return *data; 
+        }
 };
 
 int main()
@@ -38,3 +43,11 @@ int main()
     askOS();
     return 0;     
 }
+
+/*
+Output:
+
+o1.value() = 124
+o2.value() = 123
+o3.value() = 123
+*/
